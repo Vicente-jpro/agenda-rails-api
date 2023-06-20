@@ -16,8 +16,8 @@ puts "Fim da criação dos tipos de contatos."
 
 puts "Criando contactos..."
 Contact.create([
-    { name: "Vicente", emails: "vicente@gmial.com", birthdate: "1995-07-29", kind_id: 1},
-    { name: "Ruben", emails: "ruben@gmial.com", birthdate: "1995-07-29", kind_id: 2}
+    { name: "Vicente", emails: "vicente@gmial.com", birthdate: "1995-07-29", kind: Kind.all.sample},
+    { name: "Ruben", emails: "ruben@gmial.com", birthdate: "1995-07-29", kind: Kind.all.sample}
 ])
 puts "Fim da criação de contactos."
 
