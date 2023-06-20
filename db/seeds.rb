@@ -14,11 +14,24 @@ Kind.create([
 ])
 puts "Fim da criação dos tipos de contatos."
 
+
 puts "Criando contactos..."
 Contact.create([
     { name: "Vicente", emails: "vicente@gmial.com", birthdate: "1995-07-29", kind: Kind.all.sample},
     { name: "Ruben", emails: "ruben@gmial.com", birthdate: "1995-07-29", kind: Kind.all.sample}
 ])
 puts "Fim da criação de contactos."
+
+
+puts "Criando os phones..."
+Phone.create([
+    { number: "944889722", contact: Contact.all.sample},
+    { number: "925922549", contact: Contact.all.sample},
+    { number: "923677288", contact: Contact.all.sample},
+    { number: "977777777", contact: Contact.all.sample}
+])
+puts "Fim da criação dos phones."
+
+
 
 
