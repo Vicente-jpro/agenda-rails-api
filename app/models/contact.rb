@@ -1,3 +1,9 @@
 class Contact < ApplicationRecord
-    bilongs_to: kind
+    belongs_to :kind
+
+    def as_json(options={})
+        super(
+            include: :kind
+        )
+    end
 end

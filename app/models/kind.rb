@@ -1,3 +1,3 @@
 class Kind < ApplicationRecord
-    has_may: contact
+    has_may :contacts
 end
