@@ -23,6 +23,15 @@ Contact.create([
 puts "Fim da criação de contactos."
 
 
+puts "Criando address..."
+Address.create([
+    { street: "Kilamba", contact: Contact.all.sample},
+    { street: "Calemba 2", contact: Contact.all.sample},
+    { street: "Figure", contact: Contact.all.sample}
+])
+puts "Fim da criação de adrress."
+
+
 puts "Criando os phones..."
 Phone.create([
     { number: "944889722", contact: Contact.all.sample},

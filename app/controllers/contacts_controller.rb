@@ -3,9 +3,9 @@ class ContactsController < ApplicationController
 
   # GET /contacts
   def index
-    @contacts = Contact.all
+    @contacts = Contact.includes(:kind, :address)
 
-    render json: @contacts
+    render json: @contacts, include: [:kind, :address]
   end
 
   # GET /contacts/1
@@ -51,6 +51,7 @@ class ContactsController < ApplicationController
         :emails, 
         :birthdate, 
         :kind_id, 
-        phones_attributes: [:id, :number, :_destroy])
+        phones_attributes: [:id, :number, :_destroy],
+        address_attributes: [:id, :street])
     end
 end
