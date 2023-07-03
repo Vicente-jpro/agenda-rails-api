@@ -5,4 +5,6 @@ class ContactSerializer < ActiveModel::Serializer
   has_many :phones
   has_one :address
   
+  #link(:self) { contact_path(object.id) }
+  
 end
