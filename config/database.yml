@@ -9,10 +9,10 @@ default: &default
 development:
   <<: *default
   database: agenda_rails_api_development
-  username: postgres
-  password: vicente0301
   host: localhost
   port: 5432
+  username: postgres
+  password: vicente0301
 
 test:
   <<: *default
