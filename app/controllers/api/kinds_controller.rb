@@ -1,4 +1,4 @@
-class KindsController < ApplicationController
+class Api::KindsController < ApplicationController
   before_action :set_kind, only: %i[ show update destroy ]
 
   # GET /kinds
